@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle, Send, Mail, MapPin } from "lucide-react";
+import { MessageCircle, Send } from "lucide-react";
 
 export function Disclaimer() {
   return (
@@ -32,13 +32,13 @@ const quickLinks = [
 ] as const;
 
 const categoryLinks = [
-  { to: "/latest-jobs", label: "Latest Jobs" },
-  { to: "/admit-card", label: "Admit Card" },
-  { to: "/results", label: "Results" },
-  { to: "/answer-key", label: "Answer Key" },
-  { to: "/syllabus", label: "Syllabus" },
-  { to: "/admission", label: "Admission" },
-  { to: "/state-jobs", label: "State Jobs" },
+const quickLinks = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About Us" },
+  { to: "/contact", label: "Contact Us" },
+  { to: "/privacy-policy", label: "Privacy Policy" },
+  { to: "/disclaimer", label: "Disclaimer" },
+  { to: "/terms", label: "Terms & Conditions" },
 ] as const;
 
 export function Footer() {
@@ -70,16 +70,8 @@ export function Footer() {
                 <MapPin className="h-4 w-4 text-[var(--brand-green)]" />
                 <span>India</span>
               </div>
-            </div>
-          </div>
+            </p>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Quick Links</h3>
-            <ul className="mt-4 space-y-2.5 text-sm">
-              {quickLinks.map((l) => (
-                <li key={l.to}>
-                  <Link to={l.to} className="text-slate-400 hover:text-white transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -130,9 +122,8 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+        <div className="container mx-auto px-4 py-5 text-center text-xs text-slate-400">
           <p>© {new Date().getFullYear()} Examtaza.in. All Rights Reserved.</p>
-          <p>Made with care for India's job seekers.</p>
         </div>
       </div>
     </footer>
