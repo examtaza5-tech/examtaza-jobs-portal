@@ -24,10 +24,10 @@ export function Header() {
             <div className="flex h-9 w-9 items-center justify-center rounded-md bg-[var(--brand-blue)] text-white font-bold">
               E
             </div>
-            <span className="text-2xl md:text-3xl font-extrabold tracking-tight">
+            <span className="text-lg md:text-xl font-semibold tracking-tight">
               <span className="text-[var(--brand-blue)]">Exam</span>
               <span className="text-[var(--brand-green)]">taza</span>
-              <span className="text-muted-foreground text-base font-semibold">.in</span>
+              <span className="text-muted-foreground text-sm font-medium">.in</span>
             </span>
           </Link>
 
