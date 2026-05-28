@@ -11,6 +11,7 @@ import {
 import appCss from "../styles.css?url";
 import { Header } from "@/components/Header";
 import { Disclaimer, Footer } from "@/components/SiteFooter";
+import { FAQ } from "@/components/FAQ";
 
 
 function NotFoundComponent() {
