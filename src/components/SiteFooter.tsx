@@ -8,12 +8,12 @@ export function Disclaimer() {
         <div className="rounded-lg border-l-4 border-[var(--brand-blue)] bg-background p-5 shadow-sm">
           <h2 className="text-sm font-bold text-[var(--brand-blue)] mb-2">Disclaimer</h2>
           <p className="text-sm leading-relaxed text-muted-foreground">
-            Examtaza.in is an independent platform and is not associated with any official or
-            government organization. All information provided here is for general informational
-            purposes only and cannot be used for legal purposes. We strongly advise all visitors
-            to verify details through official government notifications before relying on them.
-            If you spot any errors or inaccuracies in our content, please notify us immediately
-            through our Contact Us page.
+            Disclaimer: Examtaza.in is an independent platform and is not associated with any
+            official or government organization. All information provided on this website is for
+            general informational purposes only and should not be considered as legal or official
+            advice. We strongly advise visitors to verify all details through official government
+            notifications and websites before making any decision. If you find any errors or
+            inaccurate information, please contact us through our Contact Us page.
           </p>
         </div>
       </div>
