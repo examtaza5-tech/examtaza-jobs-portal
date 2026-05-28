@@ -25,11 +25,11 @@ export function Header() {
               E
             </div>
             <span className="text-xl font-bold tracking-tight">
+            <span className="text-2xl md:text-3xl font-extrabold tracking-tight">
               <span className="text-[var(--brand-blue)]">Exam</span>
               <span className="text-[var(--brand-green)]">taza</span>
-              <span className="text-muted-foreground text-sm font-medium">.in</span>
+              <span className="text-muted-foreground text-base font-semibold">.in</span>
             </span>
-          </Link>
 
           <form className="hidden md:flex flex-1 max-w-md mx-4" role="search">
             <div className="relative w-full">
