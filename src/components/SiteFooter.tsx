@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle, Send, Mail, MapPin } from "lucide-react";
+import { MessageCircle, Send } from "lucide-react";
 
 export function Disclaimer() {
   return (
@@ -28,7 +28,6 @@ const quickLinks = [
   { to: "/privacy-policy", label: "Privacy Policy" },
   { to: "/disclaimer", label: "Disclaimer" },
   { to: "/terms", label: "Terms & Conditions" },
-  { to: "/sitemap", label: "Sitemap" },
 ] as const;
 
 const categoryLinks = [
@@ -61,16 +60,6 @@ export function Footer() {
               results, answer keys, syllabus and admission updates from across India — published
               quickly and accurately.
             </p>
-            <div className="mt-4 space-y-2 text-sm text-slate-400">
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-[var(--brand-green)]" />
-                <span>contact@examtaza.in</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-[var(--brand-green)]" />
-                <span>India</span>
-              </div>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -130,9 +119,8 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+        <div className="container mx-auto px-4 py-5 text-center text-xs text-slate-400">
           <p>© {new Date().getFullYear()} Examtaza.in. All Rights Reserved.</p>
-          <p>Made with care for India's job seekers.</p>
         </div>
       </div>
     </footer>
