@@ -9,38 +9,334 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as SyllabusRouteImport } from './routes/syllabus'
+import { Route as StateJobsRouteImport } from './routes/state-jobs'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SitemapRouteImport } from './routes/sitemap'
+import { Route as ResultsRouteImport } from './routes/results'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as LatestJobsRouteImport } from './routes/latest-jobs'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AnswerKeyRouteImport } from './routes/answer-key'
+import { Route as AdmitCardRouteImport } from './routes/admit-card'
+import { Route as AdmissionRouteImport } from './routes/admission'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as StateJobsStateRouteImport } from './routes/state-jobs.$state'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SyllabusRoute = SyllabusRouteImport.update({
+  id: '/syllabus',
+  path: '/syllabus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StateJobsRoute = StateJobsRouteImport.update({
+  id: '/state-jobs',
+  path: '/state-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapRoute = SitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResultsRoute = ResultsRouteImport.update({
+  id: '/results',
+  path: '/results',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LatestJobsRoute = LatestJobsRouteImport.update({
+  id: '/latest-jobs',
+  path: '/latest-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnswerKeyRoute = AnswerKeyRouteImport.update({
+  id: '/answer-key',
+  path: '/answer-key',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdmitCardRoute = AdmitCardRouteImport.update({
+  id: '/admit-card',
+  path: '/admit-card',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdmissionRoute = AdmissionRouteImport.update({
+  id: '/admission',
+  path: '/admission',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StateJobsStateRoute = StateJobsStateRouteImport.update({
+  id: '/$state',
+  path: '/$state',
+  getParentRoute: () => StateJobsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/admission': typeof AdmissionRoute
+  '/admit-card': typeof AdmitCardRoute
+  '/answer-key': typeof AnswerKeyRoute
+  '/contact': typeof ContactRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/latest-jobs': typeof LatestJobsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/results': typeof ResultsRoute
+  '/sitemap': typeof SitemapRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/state-jobs': typeof StateJobsRouteWithChildren
+  '/syllabus': typeof SyllabusRoute
+  '/terms': typeof TermsRoute
+  '/state-jobs/$state': typeof StateJobsStateRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/admission': typeof AdmissionRoute
+  '/admit-card': typeof AdmitCardRoute
+  '/answer-key': typeof AnswerKeyRoute
+  '/contact': typeof ContactRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/latest-jobs': typeof LatestJobsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/results': typeof ResultsRoute
+  '/sitemap': typeof SitemapRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/state-jobs': typeof StateJobsRouteWithChildren
+  '/syllabus': typeof SyllabusRoute
+  '/terms': typeof TermsRoute
+  '/state-jobs/$state': typeof StateJobsStateRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/admission': typeof AdmissionRoute
+  '/admit-card': typeof AdmitCardRoute
+  '/answer-key': typeof AnswerKeyRoute
+  '/contact': typeof ContactRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/latest-jobs': typeof LatestJobsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/results': typeof ResultsRoute
+  '/sitemap': typeof SitemapRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/state-jobs': typeof StateJobsRouteWithChildren
+  '/syllabus': typeof SyllabusRoute
+  '/terms': typeof TermsRoute
+  '/state-jobs/$state': typeof StateJobsStateRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/admission'
+    | '/admit-card'
+    | '/answer-key'
+    | '/contact'
+    | '/disclaimer'
+    | '/latest-jobs'
+    | '/privacy-policy'
+    | '/results'
+    | '/sitemap'
+    | '/sitemap.xml'
+    | '/state-jobs'
+    | '/syllabus'
+    | '/terms'
+    | '/state-jobs/$state'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/admission'
+    | '/admit-card'
+    | '/answer-key'
+    | '/contact'
+    | '/disclaimer'
+    | '/latest-jobs'
+    | '/privacy-policy'
+    | '/results'
+    | '/sitemap'
+    | '/sitemap.xml'
+    | '/state-jobs'
+    | '/syllabus'
+    | '/terms'
+    | '/state-jobs/$state'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/admission'
+    | '/admit-card'
+    | '/answer-key'
+    | '/contact'
+    | '/disclaimer'
+    | '/latest-jobs'
+    | '/privacy-policy'
+    | '/results'
+    | '/sitemap'
+    | '/sitemap.xml'
+    | '/state-jobs'
+    | '/syllabus'
+    | '/terms'
+    | '/state-jobs/$state'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AdmissionRoute: typeof AdmissionRoute
+  AdmitCardRoute: typeof AdmitCardRoute
+  AnswerKeyRoute: typeof AnswerKeyRoute
+  ContactRoute: typeof ContactRoute
+  DisclaimerRoute: typeof DisclaimerRoute
+  LatestJobsRoute: typeof LatestJobsRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  ResultsRoute: typeof ResultsRoute
+  SitemapRoute: typeof SitemapRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  StateJobsRoute: typeof StateJobsRouteWithChildren
+  SyllabusRoute: typeof SyllabusRoute
+  TermsRoute: typeof TermsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/syllabus': {
+      id: '/syllabus'
+      path: '/syllabus'
+      fullPath: '/syllabus'
+      preLoaderRoute: typeof SyllabusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/state-jobs': {
+      id: '/state-jobs'
+      path: '/state-jobs'
+      fullPath: '/state-jobs'
+      preLoaderRoute: typeof StateJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap': {
+      id: '/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof SitemapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/results': {
+      id: '/results'
+      path: '/results'
+      fullPath: '/results'
+      preLoaderRoute: typeof ResultsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/latest-jobs': {
+      id: '/latest-jobs'
+      path: '/latest-jobs'
+      fullPath: '/latest-jobs'
+      preLoaderRoute: typeof LatestJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/answer-key': {
+      id: '/answer-key'
+      path: '/answer-key'
+      fullPath: '/answer-key'
+      preLoaderRoute: typeof AnswerKeyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admit-card': {
+      id: '/admit-card'
+      path: '/admit-card'
+      fullPath: '/admit-card'
+      preLoaderRoute: typeof AdmitCardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admission': {
+      id: '/admission'
+      path: '/admission'
+      fullPath: '/admission'
+      preLoaderRoute: typeof AdmissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +344,45 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/state-jobs/$state': {
+      id: '/state-jobs/$state'
+      path: '/$state'
+      fullPath: '/state-jobs/$state'
+      preLoaderRoute: typeof StateJobsStateRouteImport
+      parentRoute: typeof StateJobsRoute
+    }
   }
 }
 
+interface StateJobsRouteChildren {
+  StateJobsStateRoute: typeof StateJobsStateRoute
+}
+
+const StateJobsRouteChildren: StateJobsRouteChildren = {
+  StateJobsStateRoute: StateJobsStateRoute,
+}
+
+const StateJobsRouteWithChildren = StateJobsRoute._addFileChildren(
+  StateJobsRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AdmissionRoute: AdmissionRoute,
+  AdmitCardRoute: AdmitCardRoute,
+  AnswerKeyRoute: AnswerKeyRoute,
+  ContactRoute: ContactRoute,
+  DisclaimerRoute: DisclaimerRoute,
+  LatestJobsRoute: LatestJobsRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  ResultsRoute: ResultsRoute,
+  SitemapRoute: SitemapRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  StateJobsRoute: StateJobsRouteWithChildren,
+  SyllabusRoute: SyllabusRoute,
+  TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
