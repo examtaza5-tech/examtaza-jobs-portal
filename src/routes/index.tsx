@@ -188,26 +188,6 @@ function Home() {
           </div>
         </div>
       </section>
-
-      {/* Popular Categories */}
-      <section className="container mx-auto px-4 py-12">
-        <div className="mb-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold">Popular Categories</h2>
-          <p className="text-muted-foreground mt-2">Quick access to top sections</p>
-        </div>
-        <div className="flex flex-wrap justify-center gap-3">
-          {[...categories, { to: "/state-jobs", title: "State Jobs", desc: "", icon: MapPin, color: "" }].map((c) => (
-            <Link
-              key={c.to}
-              to={c.to}
-              className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold shadow-sm hover:border-[var(--brand-green)] hover:text-[var(--brand-green)] transition-colors"
-            >
-              <c.icon className="h-4 w-4" />
-              {c.title}
-            </Link>
-          ))}
-        </div>
-      </section>
     </>
   );
 }
