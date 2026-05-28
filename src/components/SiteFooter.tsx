@@ -28,17 +28,16 @@ const quickLinks = [
   { to: "/privacy-policy", label: "Privacy Policy" },
   { to: "/disclaimer", label: "Disclaimer" },
   { to: "/terms", label: "Terms & Conditions" },
-  { to: "/sitemap", label: "Sitemap" },
 ] as const;
 
 const categoryLinks = [
-const quickLinks = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About Us" },
-  { to: "/contact", label: "Contact Us" },
-  { to: "/privacy-policy", label: "Privacy Policy" },
-  { to: "/disclaimer", label: "Disclaimer" },
-  { to: "/terms", label: "Terms & Conditions" },
+  { to: "/latest-jobs", label: "Latest Jobs" },
+  { to: "/admit-card", label: "Admit Card" },
+  { to: "/results", label: "Results" },
+  { to: "/answer-key", label: "Answer Key" },
+  { to: "/syllabus", label: "Syllabus" },
+  { to: "/admission", label: "Admission" },
+  { to: "/state-jobs", label: "State Jobs" },
 ] as const;
 
 export function Footer() {
@@ -61,17 +60,15 @@ export function Footer() {
               results, answer keys, syllabus and admission updates from across India — published
               quickly and accurately.
             </p>
-            <div className="mt-4 space-y-2 text-sm text-slate-400">
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-[var(--brand-green)]" />
-                <span>contact@examtaza.in</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-[var(--brand-green)]" />
-                <span>India</span>
-              </div>
-            </p>
+          </div>
 
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Quick Links</h3>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              {quickLinks.map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to} className="text-slate-400 hover:text-white transition-colors">
                     {l.label}
                   </Link>
                 </li>
