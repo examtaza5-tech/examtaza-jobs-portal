@@ -9,6 +9,9 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { Header } from "@/components/Header";
+import { Disclaimer, Footer } from "@/components/SiteFooter";
+
 
 function NotFoundComponent() {
   return (
