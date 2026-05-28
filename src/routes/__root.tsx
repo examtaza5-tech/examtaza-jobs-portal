@@ -11,6 +11,7 @@ import {
 import appCss from "../styles.css?url";
 import { Header } from "@/components/Header";
 import { Disclaimer, Footer } from "@/components/SiteFooter";
+import { FAQ } from "@/components/FAQ";
 
 
 function NotFoundComponent() {
@@ -121,6 +122,7 @@ function RootComponent() {
         <main className="flex-1">
           <Outlet />
         </main>
+        <FAQ />
         <Disclaimer />
         <Footer />
       </div>
