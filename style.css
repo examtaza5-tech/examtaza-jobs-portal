@@ -1,0 +1,17 @@
+/*
+Theme Name: ExamTaza
+Theme URI: https://examtaza.in/
+Author: ExamTaza
+Author URI: https://examtaza.in/
+Description: Modern, lightweight, AdSense-friendly WordPress theme for ExamTaza.in — government jobs, admit cards, results, answer keys, syllabus, and admission updates. Includes FAQ accordion, premium State Jobs section, and a clean dark footer.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: examtaza
+Tags: blog, news, custom-menu, featured-images, threaded-comments, translation-ready, two-columns, right-sidebar, education
+*/
+
+/* Main styles are enqueued from assets/css/style.css */
